@@ -28,6 +28,16 @@ public class AluguelServiceTest {
         AluguelRepository repository = new AluguelRepository();
         AluguelService service = new AluguelService(repository);
 
+        System.out.println("--- Iniciando Testes de AluguelService ---");
+
+        // Teste: Alugar Livro
+        System.out.println("Testando: Alugar Livro...");
         service.alugar(usuario, livro);
+
+        // Teste: Devolver Livro
+        System.out.println("Testando: Devolver Livro...");
+        service.devolver(usuario, livro);
+        
+        System.out.println("--- Testes finalizados ---");
     }
 }
